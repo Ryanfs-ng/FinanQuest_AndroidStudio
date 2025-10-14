@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Icones da navbar inferior com os IDs -->
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@android:drawable/ic_menu_view"
+        android:title="@string/in_cio" />
+
+    <item
+        android:id="@+id/nav_analytics"
+        android:icon="@android:drawable/ic_menu_sort_by_size"
+        android:title="@string/analytics" />
+
+    <item
+        android:id="@+id/nav_goals"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="@string/metas" />
+
+    <item
+        android:id="@+id/nav_achievements"
+        android:icon="@drawable/ic_conquista2"
+        android:title="@string/conquistas" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_default_user"
+        android:title="@string/perfil" />
+
+</menu>

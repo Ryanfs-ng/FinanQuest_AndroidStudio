@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1E1E2A"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NOVA TRANSAÇÃO"
+            android:textColor="#B968FF"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Data com DatePicker -->
+        <EditText
+            android:id="@+id/etData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data"
+            android:focusable="false"
+            android:clickable="true"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#B968FF"
+            android:textColorHint="#8A8A8A"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"/>
+
+
+
+        <!-- Categoria (Spinner) -->
+        <Spinner
+            android:id="@+id/spinnerCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B968FF"
+            android:layout_marginBottom="10dp"
+            android:popupBackground="#1E1E2A"
+            android:textColor="#FFFFFF"
+            android:padding="10dp"/>
+
+        <!-- Beneficiário -->
+        <EditText
+            android:id="@+id/etBeneficiario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Beneficiário"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#B968FF"
+            android:textColorHint="#8A8A8A"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"/>
+
+        <!-- Valor (com máscara) -->
+        <EditText
+            android:id="@+id/etValor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Valor (R$)"
+            android:inputType="numberDecimal"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#B968FF"
+            android:textColorHint="#8A8A8A"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"/>
+
+        <!-- Anotações -->
+        <EditText
+            android:id="@+id/etNotas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Notas (opcional)"
+            android:inputType="textMultiLine"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#B968FF"
+            android:textColorHint="#8A8A8A"
+            android:layout_marginBottom="16dp"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/btnCriarTransacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CRIAR TRANSAÇÃO"
+            android:textAllCaps="true"
+            android:backgroundTint="#B968FF"
+            android:textColor="#FFFFFF"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FinanQuest</string>
+    <string name="in_cio">Início</string>
+    <string name="analytics">Analytics</string>
+    <string name="metas">Metas</string>
+    <string name="conquistas">Conquistas</string>
+    <string name="perfil">Perfil</string>
+</resources>
