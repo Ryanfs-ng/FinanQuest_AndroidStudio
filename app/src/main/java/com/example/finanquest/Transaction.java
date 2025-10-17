@@ -1,6 +1,8 @@
 package com.example.finanquest;
 
-public class Transaction {
+import java.io.Serializable;
+
+public class Transaction implements Serializable {
     private String title;
     private String type;
     private String amount;

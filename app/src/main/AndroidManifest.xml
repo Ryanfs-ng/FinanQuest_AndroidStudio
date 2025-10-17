@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FinanQuest">
+        <activity android:name=".AnalyticsActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

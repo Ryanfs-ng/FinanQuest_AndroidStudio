@@ -1,5 +1,6 @@
 package com.example.finanquest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.SurfaceControl;
 import android.widget.Toast;
@@ -31,9 +32,10 @@ public class MainActivity extends AppCompatActivity {
         transactions.add(new Transaction("DROPBOX PRO", "Assinatura", "-R$ 144,00", "13 OUT 2025"));
         transactions.add(new Transaction("SPOTIFY PREMIUM", "Assinatura", "-R$ 24,00", "10 OUT 2025"));
         transactions.add(new Transaction("SALÁRIO", "Receita", "+R$ 1518,00", "05 OUT 2025"));
-        transactions.add(new Transaction("NETFLIX - FAMÍLIA", "Assinatura", " -R$ 44,99", "25 SET 2025"));
+        transactions.add(new Transaction("AMAZON", "Compras Online", " -R$ 44,99", "25 SET 2025"));
         transactions.add(new Transaction("YOUTUBE ADS", "Receita", "+R$ 32,00", "24 SET 2025"));
         transactions.add(new Transaction("Compras do mercado", "Despesa", "-R$ 250,00", "10 SET 2025"));
+        transactions.add(new Transaction("Imóveis", "Outros", "-R$ 400,00", "10 SET 2025"));
 
         //Adapter para deixa-lo mais dinamico
         adapter = new TransactionAdapter(transactions);
@@ -54,8 +56,11 @@ public class MainActivity extends AppCompatActivity {
             if (id == R.id.nav_home) {
                 Toast.makeText(this, "Início", Toast.LENGTH_SHORT).show();
                 return true;
-            } else if (id == R.id.nav_analytics ) {
-                Toast.makeText(this, "Analytics", Toast.LENGTH_SHORT).show();
+            } else if (id == R.id.nav_analytics) {
+                Intent intent = new Intent(MainActivity.this, AnalyticsActivity.class);
+                intent.putExtra("transactions", new ArrayList<>(transactions)); // precisa ser Serializable
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 return true;
             } else if (id == R.id.nav_goals) {
                 Toast.makeText(this, "Metas", Toast.LENGTH_SHORT).show();
